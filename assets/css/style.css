@@ -1,1 +1,177 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/*-------------------------------------------------------Header--------- */
+header {
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu > li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/* ----------------------------------------Special paddings/margins/text */
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.general-sub {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    color: #0805bd;
+}
+
+.inline-block {
+    display: inline-block;
+}
+/* ----------------------------------------Footer-----*/
+
+footer {
+    background-color: #0fb483d5;
+    color: #310404;
+    min-height: 120px;
+    margin: 0;
+}
+
+/*-------------------------------------------------------- sign up Form----------- */
+
+
+
+#signup-form {
+    color: #ffffff;
+    background-color: #0fb483d5;
+    padding: 30px;
+}
+
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+
+.text-input {
+    background: transparent;
+    color: #154b46;
+    width: 70%;
+    height: 25px;
+    margin: 5px 0 5px 0;
+    border: 1px solid #5bdbec;
+    border-radius: 1px;
+    padding: 0 5px;
+}
+
+
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 1px;
+    padding: 10px 20px;
+    font-size: 80%;
+    background-color: #5bdbec;
+    color: #aa3c98;
+}
+
+#signup {
+    background-position: center;
+    position: relative;
+}
+
+#signup-form {
+    max-width: 500px;
+    left: 10%;
+    top: 150px;
+}
+
+.text-input:hover {
+    border-color: #2610e8;
+}
+
+.join-button:hover {
+    background-color: #2610e8;
+    color: #aa3c98;
+}
+
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #aa3c98;
+    background: #5bdbec;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #2610e8;
+}
+
+#footer-details {
+    padding: 20px;
+}
