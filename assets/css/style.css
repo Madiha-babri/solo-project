@@ -1,177 +1,405 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-/*-------------------------------------------------------Header--------- */
-header {
-    background-color: #ffffff;
-    padding: 0 1rem;
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-header a {
+  .bg-color-three {
+    background-color: #85a6a6;
+}
+  
+  /* General Styles */
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    color: #22130c;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  a:hover {
+    color: #f28585;
+  }
+  
+  .uppercase {
+    text-transform: uppercase;
+  }
+  
+  a {
     text-decoration: none;
     color: inherit;
-}
-
-#menu {
-    font-size: 110%;
-    letter-spacing: 4px;
-    list-style-type: none;
-}
-
-#menu > li {
-    margin-bottom: 1em;
-}
-
-.active {
-    border-bottom: 1px solid #3a3a3a;
-}
-
-/* Navbar styles with dropdown toggle */
-nav {
-    position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    left: 0;
-    padding: 0 1rem;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: none;
-    top: 100%;
-}
-
-/* Nav toggle */
-#nav-toggle:checked~nav {
-    display: block;
-}
-
-#nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    font-size: 2rem;
-}
-
-/* ----------------------------------------Special paddings/margins/text */
-
-h1,
-h2,
-h3,
-h4 {
-    margin: 0;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.general-sub {
-    font-family: "Exo", sans-serif;
-    font-weight: 300;
-    color: #0805bd;
-}
-
-.inline-block {
-    display: inline-block;
-}
-/* ----------------------------------------Footer-----*/
-
-footer {
-    background-color: #0fb483d5;
-    color: #310404;
-    min-height: 120px;
-    margin: 0;
-}
-
-/*-------------------------------------------------------- sign up Form----------- */
-
-
-
-#signup-form {
-    color: #ffffff;
-    background-color: #0fb483d5;
-    padding: 30px;
-}
-
-
-#signup-form>h2 {
-    color: #fafafa;
-    margin-bottom: 20px;
-}
-
-
-.text-input {
-    background: transparent;
-    color: #154b46;
-    width: 70%;
-    height: 25px;
-    margin: 5px 0 5px 0;
-    border: 1px solid #5bdbec;
-    border-radius: 1px;
-    padding: 0 5px;
-}
-
-
-
-.join-button {
-    margin-top: 20px;
-    border-radius: 1px;
-    padding: 10px 20px;
-    font-size: 80%;
-    background-color: #5bdbec;
-    color: #aa3c98;
-}
-
-#signup {
-    background-position: center;
-    position: relative;
-}
-
-#signup-form {
-    max-width: 500px;
-    left: 10%;
-    top: 150px;
-}
-
-.text-input:hover {
-    border-color: #2610e8;
-}
-
-.join-button:hover {
-    background-color: #2610e8;
-    color: #aa3c98;
-}
-
-
-.social-links {
-    padding-bottom: 15px;
-}
-
-.social-links li a i {
-    width: 32px;
-    height: 32px;
-    padding: 12px 0;
-    border-radius: 50%;
-    font-size: 13px;
-    line-height: 7px;
-    text-align: center;
-    color: #aa3c98;
-    background: #5bdbec;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
+  }
+  
+  hr {
+    width: 25%;
+    margin: auto;
+  }
+  
+  .block-divider {
+    width: 75px;
+    height: 5px;
+    border: 0;
+    background-color: #f28585;
+    margin: 0 auto;
+  }
+  
+  .block-divider-sm {
+    width: 20px;
+    height: 5px;
+    border: 0;
+    background-color: #f28585;
+  }
+  
+  .hidden-heading {
+    display: none;
+  }
+  
+  /* Header */
+  
+  .active {
+    border-bottom: 1px solid #22130c;
+  }
+  
+  /* Navbar */
+  
+  .nav {
+    background-color: #85a6a6;
+  }
+  
+  .navbar {
+    margin-bottom: 0;
+    width: 100%;
+    border: 0;
+    box-shadow: 0 2px 2px #22130c;
+    z-index: 1;
+  }
+  
+  .navbar-brand {
+    text-transform: uppercase;
+    font-size: 100%;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .navbar .navbar-toggler {
+    color: #22130c;
+  }
+  
+  .navbar .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar .navbar-nav a {
+    font-weight: bold;
+  }
+  
+  .nav {
+    text-align: center;
+  }
+  
+  .navbar-toggler {
+    float: none;
+    margin-right: 0
+  }
+  
+  .ci--hamburger-lg {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .dropdown-menu {
+    background-color: #85a6a6;
+  }
+  
+  /*---------------------------------------------------------------Hero---- */
+  .hero-container {
+    height: 900px;
+    background: url("../images/earth.jpg") no-repeat center center/cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+
+
+
+.hero-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(33, 155, 211, 0.6);
+    text-align: center;
+    margin-top: 40px;
 }
 
-.social-links li a i:hover {
-    background: #2610e8;
+.text {
+    font-size: large;
+font-weight: 700;
+}
+#actions-container {
+  background: url("../images/earthways.jpg");
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+#main-header {
+    margin-bottom: 50px;
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 550;
+} 
+.video-container {
+    height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }  
+  
+  /* three reasons */
+  #section-policies {
+    background-color: var(--pink);
+  }
+  
+  #three-reasons {
+    width: 90%;
+    margin: 20px auto;
 }
 
-#footer-details {
+#three-reasons h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+  /* Intro */
+  
+  .intro {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Cards */
+  
+  .card-deck {
+    margin: 20px;
+  }
+  
+  .card-img-top {
+    max-height: 250px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    background-color: #85a6a6;
+    color: #22130c;
+  }
+  
+  .card {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+  }
+  
+  .card-body-intro {
+    background-color: #d3ddde;
+  }
+  
+  .card-body-intro p {
+    padding-top: 10px;
+  }
+  
+  .card-body-warnings {
+    background-color: #d3ddde;
+    padding: 40px;
+  }
+  
+  /* Events */
+  #events {
+    background: url("../images/preston.webp") no-repeat center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  #events div {
+    color: #d3ddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    text-align: center;
+    /* This will not wrap on screens of less than 400px wide. 
+    Each div will expand to fill the available space on its row. */
+    flex-basis: max-content;
+    flex-grow: 1;
+    /* Creates a grid of event  divs over the background image */
+    border: 2px solid #85a6a6;
+  }
+  
+  
+  /* Safeguarding */
+  
+  .sg-container {
+    height: 300px;
+    background: url("../images/padlock.webp") no-repeat center center/cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  
+  /* Guidelines */
+  .gl-container {
+    height: 300px;
+    background: url("../images/guidelines.webp") no-repeat center center/cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Accordian */
+  
+  #accordion {
     padding: 20px;
-}
+  }
+  
+  .card-header {
+    background-color: #d3ddde;
+  }
+  
+  .card-resource h6 {
+    color: #d3ddde;
+    font-weight: bold;
+  }
+   .card-resource ul {
+    list-style-type: none;
+   }
+  
+   .card-links li a {
+    text-decoration: underline;
+   }
+  /* Footer */
+  
+  footer {
+    background-color: #85a6a6;
+    margin: 0;
+  }
+  
+  .social-links {
+    padding-bottom: 15px;
+  }
+  
+  .social-links li a svg {
+    border-radius: 50%;
+    font-size: 13px;
+    text-align: center;
+    color: #fafafa;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+  }
+  
+  .social-links li a svg:hover {
+    background: #f28585;
+  }
+  
+  #footer-details {
+    padding: 20px;
+  }
+  
+  th,
+  td {
+    padding: 5px;
+  }
+  
+  /* Buttons */
+  
+  .btn-orange {
+    background-color: #f28705;
+    color: #22130c;
+    border: solid 1px #22130c;
+  }
+  
+  .btn-orange:hover,
+  .btn-orange:active,
+  .btn-orange:focus,
+  .btn-orange:active:focus {
+    background-color: #f28585;
+  }
+  
+  .btn-green {
+    background-color: #d3ddde;
+    color: #22130c;
+    border: solid 1px #22130c;
+  }
+  
+  .btn-green:hover,
+  .btn-green:active,
+  .btn-green:focus,
+  .btn-green:active:focus {
+    background-color: #f28585;
+  }
+  
+  .btn-accordion {
+    background-color: #d3ddde;
+    color: #22130c;
+    border:none;
+    font-weight: 300;
+  }
+  
+  .btn-accordion:focus {
+    box-sizing: none;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media screen and (min-width: 768px) {
+    .navbar-brand {
+      font-size: 130%;
+    }
+  }
